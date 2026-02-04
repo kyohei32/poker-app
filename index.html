@@ -4,6 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Poker Settlement (Hold'em)</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#5b2a86">
 <style>
 :root{--bd:#ddd;--m:#666;--pill:#fafafa;--plus:#2563eb;--minus:#dc2626}
 *{box-sizing:border-box}
@@ -433,5 +435,12 @@ textarea{width:100%;min-height:180px;border-radius:10px;padding:10px;border:1px 
   }
 })();
 </script>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./service-worker.js");
+  }
+</script>
+
 </body>
 </html>
+
